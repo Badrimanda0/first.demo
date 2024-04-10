@@ -1,0 +1,36 @@
+#include <Servo.h>
+
+// Define pin numbers
+const int lightSensorPin = A0;  // Analog pin for light sensor
+const int servoPin = 9;         // Pin for servo motor
+
+// Define servo motor
+Servo servoMotor;
+
+void setup() {
+  // Initialize serial communication
+  Serial.begin(9600);
+  
+  // Attach servo motor to pin
+  servoMotor.attach(servoPin);
+}
+
+void loop() {
+  // Read light sensor value
+  int lightValue = analogRead(lightSensorPin);
+  
+  // Map light sensor value to servo angle (0-180)
+  int servoAngle = map(lightValue, 0, 1023, 0, 180);
+  
+  // Print sensor value and servo angle
+  Serial.print("Light Sensor Value: ");
+  Serial.print(lightValue);
+  Serial.print("  Servo Angle: ");
+  Serial.println(servoAngle);
+  
+  // Move servo motor to the calculated angle
+  servoMotor.write(servoAngle);
+  
+  // Delay for stability
+  delay(1000);
+}
