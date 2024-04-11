@@ -1,0 +1,32 @@
+
+//WHERE IT IS PROPS WHICH INCREMENT AND DECREMENT BY STEP 5 SIPPOSE IF WE TAKE INCREMENT IT WILL INCREASE 5 AND IT DECREMENT BY STEP 5
+
+import React from 'react';
+import App from './App';
+
+export default function ParentComponent() {
+    return (
+        <div>
+            <h1>Parent Component</h1>
+            <App step={5} />
+        </div>
+    );
+}
+
+import React,{useState} from 'react'
+export default function app({step}){
+    const[count,setcount]=useState(0)
+    const increment=()=>{
+        setcount(count+step)
+    }
+    const decrement=()=>{
+        setcount(count-step)
+    }
+    return(
+        <div>
+            <h3>{count}</h3>
+            <button onclick={increment}>increment {step}</button>
+            <button onclick={decrement}>decrement {step}</button>
+        </div>
+    )
+}
