@@ -1,0 +1,35 @@
+
+
+SUPPOSE,WE CAN GIVEN THE CODE OF THE TORTOIS E ALGORTHIM FIRST WE WANT LOOKE AT THE COD EAND THE ONLY WE CAN OBSERVE OOO IT S TORTOIS ALGORTHIM
+WE HAV ETAKEN THE SLOW AN FAST AND THEN IT SMOVE TO THE NEXT NEXT TO AND ALSO MOVE THE ITERATORS ONE BY ONE...15/04/2024
+
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        if(head==null){
+            return false;
+        }
+        ListNode slow=head;
+        ListNode fast=head.next;
+        if(slow!=fast){
+            if(fast==null ||fast.next==null){
+                return false;
+            }
+            slow=head.next;
+            fast=fast.next.next;
+        }
+        return true;
+        
+        
+    }
+}
