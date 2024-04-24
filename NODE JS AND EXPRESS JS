@@ -1,0 +1,82 @@
+NODE JSWHRE THE NODE JS MAINLY USED FOR TE WEBSERVER APPLIACTION COMINHG TOT THE EXAMPLE OF THE WEBSERVER WE CAN TAKE TE WHWERE WE AWANT TO SENDD THE REQUEST TOTHE SERVER WHERE THE SERVER CAN GICVE RESPONSE WITHIN FARCATION OF SECIBDS 
+COMING WHERE WE CAN HAVE THE DIFFEREBT CLIENT WHICH SEND THE DIFFERENT REAUESTS TE SERVER WUUILL TAKES THE TIME TO GVE THEREUEST BACK TO THE CLIENT 
+IN JAVA WE CAN TAKE TE EXAMPLE OFN TOMACT SERVER IT WILL ASSIN ONE OF THE CLIENT TO ONE SERVER IT WILL PERFORM UPYO 200 AFTER 200 IT WILL TAKES TIME TO COMPLETE TE 200 REESTS THEN ONLY IT WILL GO THROUGGH THE REQUEST FROM THE SERVER 
+THE MAIN IMPRORTANT TOPIC WHICH IS THE WHERE THE JS DOESNOT SUPPORT THE MLTIPLE THREADS SO IN THAT WE WANT TO FACE THE PROBLEM SO IN THAT WE HAVE SOLUTIOJ THE INPUT/OUTPUT BLOCKING ELEMNTS ARE PRESENT SO IT WILL BE VERYUZEFUL TO HE ALL THE PEOPLE AT THAT TIME............
+WHEN THE CLIENT SENDD REQUEST TO THE SERVER THE SERVER WHICH SENDS TO THE SOME WORKERS WHO ARE DOING WORK COONTIONUSLY AND ALSO THEY ACAN PERFORM DIFFERNT TYPES OF CONDITIONS AT ATHAT TIME....................
+THERE WE CAN REDUCE THE SPEEED OF THE WORK AND WHICH GIVES THE FRACTION OF SECONDS OF RESPONSE OFROM THE CLIENT
+HOW TO READ THE FILE AND HOW TO WRITE THE FILE AND HOW TO DELETE THE FILE WE CAN OBSERVE AT HERE SO WHEN WHEVER WE WANT TO DELETE WE ARE USING THE UPLINK KEY WORD TO THE DELEETE THE ENTIRE     SYSTEM
+
+// Importing the built-in 'http' module
+const http = require('http');
+
+// Creating a server
+const server = http.createServer((req, res) => {
+  // Set the response HTTP header with HTTP status and Content type
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  
+  // Send the response body "Hello, World!"
+  res.end('Hello, World!\n');
+});
+
+// Server listens on port 8080
+server.listen(8080);
+
+// Console will print the message
+console.log('Server running at http://127.0.0.1:8080/');
+READ THE FILE
+const fs = require('fs');
+
+// Specify the file path
+const filePath = 'example.txt';
+
+// Read the contents of the file
+fs.readFile(filePath, 'utf8', (err, data) => {
+  if (err) {
+    console.error('Error reading file:', err);
+    return;
+  }
+  
+  // Log the contents of the file to the console
+  console.log('File contents:', data);
+});
+WRITE THE FILE
+const fs = require('fs');
+
+// Specify the file path
+const filePath = 'example.txt';
+
+// Data to write to the file
+const dataToWrite = 'This is the content that will be written to the file.';
+
+// Write to the file
+fs.writeFile(filePath, dataToWrite, (err) => {
+  if (err) {
+    console.error('Error writing to file:', err);
+    return;
+  }
+  
+  console.log('Data has been written to the file successfully.');
+});
+DELETE THE FILE
+const fs = require('fs');
+
+// Specify the file path
+const filePath = 'example.txt';
+
+// Delete the file
+fs.unlink(filePath, (err) => {
+  if (err) {
+    console.error('Error deleting file:', err);
+    return;
+  }
+  
+  console.log('File has been deleted successfully.');
+});
+
+
+
+
+
+
+EXPRESSSSSSSSSSSSSSSSSSSSSS    JS
+WHERE EXPRESS JS IS THE FRAMEWORK IN WHICH WECAN SIMPLE PERFORM THE
