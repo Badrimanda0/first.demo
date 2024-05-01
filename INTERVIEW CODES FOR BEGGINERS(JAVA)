@@ -1,0 +1,482 @@
+REVERSE OF A STRING 
+class demo{
+    public static void main(String[] args){
+        String s="badri";
+        String r="";
+        for(int i=s.length()-1;i>=0;i--){
+            r=r+s.charAt(i);
+        }
+        System.out.println(r);
+        
+    }
+}
+PALLINDROME OF A STRING
+class demo{
+    public static void main(String[] args){
+        String s="badri";
+        String r="";
+        for(int i=s.length()-1;i>=0;i--){
+            r=r+s.charAt(i);
+        }
+        System.out.println(r);
+        if(r.equals(s)){
+            System.out.println("pallindrome");
+        }
+        else{
+            System.out.println("not a pallindrome");
+        }
+        
+    }
+}
+REVERSE OF A NUMBER
+class demo{
+    public static void main(String[] args){
+        int s=1234;
+        int r=0;
+        while(s>0){
+            int d=s%10;
+            r=r*10+d;
+            s=s/10;
+        }
+        System.out.println(r);
+    }
+}
+
+PALLINDROME OF A NUMBER
+class demo{
+    public static void main(String[] args){
+        int s=1001;
+        int r=0;
+        while(s>0){
+            int d=s%10;
+            r=r*10+d;
+            s=s/10;
+        }
+        System.out.println(r);
+        if(r==s){
+            System.out.println("pall");
+        }
+        else{
+            System.out.println("not a pallindrome");
+        }
+    }
+}
+
+FACTORIAL OF A NUMBER
+class demo{
+    public static void main(String[] args){
+        int n=6;
+        long f=1;
+        for(int i=1;i<=n;i++){
+            f=f*i;
+        }
+        System.out.println(f);
+    }
+}
+SUM OF INTEGER 
+class demo{
+    public static void main(String[] args){
+        int s=1234;
+        int su=0;
+        while(s>0){
+            int r=s%10;
+            su=su+r;
+            s=s/10;
+            
+        }
+        System.out.println(su);
+    }
+}
+COUNT THE NUMBERS OF DIGITS PRESENT IN THE INETEGR
+class demo{
+    public static void main(String[] args){
+        int s=12345;
+        int c=0;
+        while(s>0){
+            int r=s%10;
+            c++;
+            s=s/10;
+        }
+        System.out.println(c);
+    }
+}
+ARMSTRONG NUMBER
+class demo{
+    public static void main(String[] args){
+        int s=159;
+        int t=s;
+        int su=0;
+        while(s>0){
+            int r=s%10;
+            su=su+r*r*r;
+            s=s/10;
+            
+        }
+        if(t==su){
+            System.out.println("armstrong number");
+        }
+        else{
+            System.out.println("not a armstrong");
+        }
+    }
+}
+
+MAXIMUM IN AN ARRAY
+class demo{
+    public static void main(String[] args){
+        int arr[]={1,2,3,4,5,0};
+        int max=arr[0];
+        for(int i=1;i<arr.length;i++){
+            if(max<arr[i]){
+                max=arr[i];
+            }
+        }
+        System.out.println(max);
+    }
+}
+MINIMUM OF AN ARRAY
+class demo{
+    public static void main(String[] args){
+        int arr[]={1,2,3,4,5,0};
+        int max=arr[0];
+        for(int i=1;i<arr.length;i++){
+            if(max>arr[i]){
+                max=arr[i];
+            }
+        }
+        System.out.println(max);
+    }
+}
+
+PRINT THE VOWELS IN THE GIVEN STRING
+class demo {
+    public static void main(String[] args) {
+        String s = "badri";
+        for (int i = 0; i < s.length(); i++) {
+            char k = s.charAt(i);
+            if (k == 'a' || k == 'e' || k == 'i' || k == 'o' || k == 'u') {
+                System.out.print(k + " ");
+            }
+        }
+    }
+}
+PRINT THE VOWELS AND CONSTATS IN THE GIVEN STRING...count the vowels and constants
+class demO {
+    public static void main(String[] args) {
+        String s = "badri";
+        int v = 0;
+        int c = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                v++;
+            } else {
+                c++;
+            }
+        }
+        System.out.println("Number of vowels: " + v);
+        System.out.println("Number of consonants: " + c);
+    }
+}
+COUNT THE HOW MANY EVEN NUMBERS AND OD NUMBERS PRESENT IN THE GIVEN INTEGER
+class demo {
+    public static void main(String[] args) {
+        int s = 12345;
+        int e = 0;
+        int o = 0;
+        
+        while (s > 0) {
+            int r = s % 10;
+            if (r % 2 == 0) {
+                e++;
+            } else {
+                o++;
+            }
+            s = s / 10;
+        }
+        
+        System.out.println("Number of even digits: " + e);
+        System.out.println("Number of odd digits: " + o);
+    }
+}
+NTH FIBBANOCI NUMBER
+class demo {
+    public int fib(int n) {
+        if (n == 0 || n == 1) {
+            return n;
+        }
+        return fib(n - 1) + fib(n - 2);
+    }
+
+    public static void main(String[] args) {
+        demo obj = new demo(); // Creating an instance of the class to access non-static method fib
+        int r = obj.fib(5);
+        System.out.println(r);
+    }
+}
+FIBANCOII SERIES
+class demo {
+    public int fib(int n) {
+        if (n == 0 || n == 1) {
+            return n;
+        }
+        return fib(n - 1) + fib(n - 2);
+    }
+
+    public static void main(String[] args) {
+        demo obj = new demo();
+        for (int i = 0; i <= 5; i++) {
+            int r = obj.fib(i);
+            System.out.print(r + " ");
+        }
+    }
+}
+
+FIBANOCCIII SERIES
+class demo {
+    public static void main(String[] args) {
+        int a = 0;
+        int b = 1;
+        System.out.print(a + " " + b + " ");
+        for (int i = 2; i < 5; i++) {
+            int c = a + b;
+            System.out.print(c + " ");
+            a = b;
+            b = c;
+        }
+    }
+}
+BINARY TO DECIMAL
+
+public class demo {
+    public static void main(String[] args) {
+        String s = "1001";
+        int d = 0;
+        int power = 0;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            if (s.charAt(i) == '1') {
+                d += Math.pow(2, power);
+            }
+            power++;
+        }
+        System.out.println("Decimal equivalent: " + d);
+    }
+}
+DECIMAL TO BINARY
+
+
+
+public class demo {
+    public static void main(String[] args) {
+        int b = 9;
+        StringBuilder binary = new StringBuilder(); // Corrected: Declaring binary as a StringBuilder
+        while (b > 0) {
+            int bit = b % 2;
+            binary.append(bit);
+            b = b / 2;
+        }
+        System.out.println(binary); // Corrected: Added a semicolon
+    }
+}
+SWAPPING OF TWO NUMBERS
+class demo{
+    public static void main(String[] args){
+        int a=2;
+        int b=3;
+        int t=a;
+        a=b;
+        b=t;
+        System.out.println(a);
+        System.out.println(b);
+    }
+}
+2ND METHOD
+class demo{
+    public static void main(String[] args){
+        int a=2;
+        int b=3;
+        a=a^b;
+        b=a^b;
+        a=^b;
+        
+        System.out.println(a);
+        System.out.println(b);
+    }
+}
+3RD METHOD
+class demo{
+    public static void main(String[] args){
+        int a=2;
+        int b=3;
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        
+        System.out.println(a);
+        System.out.println(b);
+    }
+}
+4TH METHOD
+class demo{
+    public static void main(String[] args){
+        int a=2;
+        int b=3;
+        a=a*b;
+        b=a/b;
+        a=a/b;
+        
+        System.out.println(a);
+        System.out.println(b);
+    }
+}
+5TH METHOD
+class demo{
+    public static void main(String[] args){
+        int a=2;
+        int b=3;
+        b=a+b-(a=b);
+        
+        System.out.println(a);
+        System.out.println(b);
+    }
+}
+DUPLICATES OF AN ARRAY
+class demo{
+    public static void main(String[] args){
+        int arr[]={1,2,3,4,5,2,3};
+        for(int i=1;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    System.out.println(arr[i]);
+                }
+            }
+        }
+    }
+}
+count the asciii values in the given string
+class demo{
+    public static void main(String[] args){
+        String s="badri";
+        int c=0;
+        for(int i=s.length()-1;i>=0;i--){
+            c=s.charAt(i);
+            break;
+        }
+        System.out.println(c);
+    }
+}
+
+COUNT THE CHARCTERS
+class demo{
+    public static void main(String[] args){
+        String s="badri";
+        int c=0;
+        for(int i=0;i<s.length();i++){
+            c++;
+        }
+        System.out.println(c);
+    }
+}
+LINEAR SEARCH INDEX
+class demo{
+    public static void main(String[] args){
+        int arr[]={1,2,3,4,5};
+        int t=4;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==t){
+                System.out.println(i);
+            }
+        }
+    }
+}
+BINARY SEARCH
+class Demo {
+    public static void main(String[] args) {
+        int arr[] = {1, 2, 3, 46, 5};
+        int t = 46;
+        int s = 0;
+        int e = arr.length - 1; // Corrected to use arr.length
+        
+        while (s <= e) { // Changed condition to s <= e
+            int m = (s + e) / 2;
+            
+            if (arr[m] == t) {
+                System.out.println("Index of " + t + ": " + m);
+                break; // Exit the loop if the element is found
+            } else if (arr[m] < t) {
+                s = m + 1; // Update the start index
+            } else {
+                e = m - 1; // Update the end index
+            }
+        }
+    }
+}
+ROMAN TO INTEGER
+class Demo {
+    public static void main(String[] args) {
+        String s = "IVIX";
+        int result = 0;
+        int previousValue = 0;
+
+        for (int i = s.length() - 1; i >= 0; i--) {
+            int currentValue = 0;
+            switch (s.charAt(i)) {
+                case 'I':
+                    currentValue = 1;
+                    break;
+                case 'V':
+                    currentValue = 5;
+                    break;
+                case 'X':
+                    currentValue = 10;
+                    break;
+                case 'L':
+                    currentValue = 50;
+                    break;
+                case 'C':
+                    currentValue = 100;
+                    break;
+                case 'D':
+                    currentValue = 500;
+                    break;
+                case 'M':
+                    currentValue = 1000;
+                    break;
+            }
+            if (currentValue < previousValue) {
+                result -= currentValue;
+            } else {
+                result += currentValue;
+            }
+            previousValue = currentValue;
+        }
+        System.out.println(result); 
+
+    }
+}
+
+
+INTEGER TO ROMAN
+class Solution {
+    public String intToRoman(int num) {
+        int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] numerals = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        
+        StringBuilder result = new StringBuilder();
+        
+        for (int i = 0; i < values.length; i++) {
+            while (num >= values[i]) {
+                result.append(numerals[i]);
+                num -= values[i];
+            }
+        }
+        
+        return result.toString();
+    }
+}
+
+
+
+
+
+
